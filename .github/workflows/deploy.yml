@@ -3,9 +3,6 @@ name: wxread
 concurrency:
   group: ${{ github.workflow }} # 使用工作流名称作为并发组的key
   cancel-in-progress: true    # 取消任何正在进行的相同并发组的工作流
-
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
   
 on:
   schedule:
@@ -66,4 +63,5 @@ jobs:
     permissions:
       actions: write
     steps:
-      - uses: liskin/gh-workflow-keepalive@v1.2.1
+      # 暂时注释掉排查问题，或者去 GitHub Marketplace 寻找支持 Node.js 24 的替代插件
+      # - uses: liskin/gh-workflow-keepalive@v1.2.1 
