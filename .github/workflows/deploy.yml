@@ -20,8 +20,7 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     environment: AutoRead  # 指定环境
-    env: ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
+   
     steps:
 
     - name: Set DNS to Google's DNS
