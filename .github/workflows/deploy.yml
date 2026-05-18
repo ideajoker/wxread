@@ -20,8 +20,7 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     environment: AutoRead  # 指定环境
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+    env: ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:
 
@@ -31,10 +30,10 @@ jobs:
         echo "nameserver 8.8.4.4" | sudo tee -a /etc/resolv.conf
 
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.10'
 
