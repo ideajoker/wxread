@@ -4,6 +4,9 @@ concurrency:
   group: ${{ github.workflow }} # 使用工作流名称作为并发组的key
   cancel-in-progress: true    # 取消任何正在进行的相同并发组的工作流
 
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+  
 on:
   schedule:
     # 凌晨任务：北京时间每天 01:00（UTC 前一天 17:00）
