@@ -20,6 +20,8 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     environment: AutoRead  # 指定环境
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:
 
@@ -63,5 +65,4 @@ jobs:
     permissions:
       actions: write
     steps:
-      # 暂时注释掉排查问题，或者去 GitHub Marketplace 寻找支持 Node.js 24 的替代插件
-      # - uses: liskin/gh-workflow-keepalive@v1.2.1 
+      - uses: liskin/gh-workflow-keepalive@v1.2.1 
